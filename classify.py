@@ -25,7 +25,7 @@ from keras import backend as K
 K.set_image_dim_ordering('th')
 
 import numpy as np
-
+#next part is
 # Image manipulations and arranging data
 import os
 from PIL import Image
@@ -92,7 +92,7 @@ for fol in classes:
         imrs=imrs.reshape(3,m,n);
         x.append(imrs)
         y.append(fol)
-        
+
 x=np.array(x);
 y=np.array(y);
 
@@ -171,7 +171,7 @@ with open("model.json", "w") as json_file:
 # serialize weights to HDF5
 model.save_weights("model.h5")
 print("Saved model to disk")
- 
+
 
 
 # In[3]:
@@ -279,7 +279,7 @@ while success:
          for k in range(2):
              print("%s --> %s"%(classes[k],predictions[0][k]))
              out[classes[k]]=(predictions[0][k])
-         
+
          sorted_x =out
          z=sorted(out.items(), key=operator.itemgetter(1),reverse=True)
 
@@ -287,6 +287,6 @@ while success:
          plt.xticks(range(len(sorted_x)), list(sorted_x.keys()))
          plt.show()
 
-         
+
     count+=1
 print(i)
