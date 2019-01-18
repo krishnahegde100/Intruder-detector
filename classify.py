@@ -25,7 +25,7 @@ from keras import backend as K
 K.set_image_dim_ordering('th')
 
 import numpy as np
-#next part is
+#next part is image manipulations
 # Image manipulations and arranging data
 import os
 from PIL import Image
